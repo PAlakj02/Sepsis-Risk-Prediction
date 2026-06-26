@@ -9,14 +9,14 @@ import json
 # LOAD SCALER
 # =====================================================
 
-with open("/Users/palakjagtap/Downloads/archive/SepsisWebApp/model02/scaler2.pkl", "rb") as f:
+with open("model2/scaler2.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 # =====================================================
 # LOAD FEATURES
 # =====================================================
 
-with open("/Users/palakjagtap/Downloads/archive/SepsisWebApp/model02/features2.json", "r") as f:
+with open("model2/features2.json", "r") as f:
     feature_names = json.load(f)
 
 # =====================================================
@@ -24,7 +24,7 @@ with open("/Users/palakjagtap/Downloads/archive/SepsisWebApp/model02/features2.j
 # =====================================================
 
 model = xgb.Booster()
-model.load_model("/Users/palakjagtap/Downloads/archive/SepsisWebApp/model02/sepsis_model2.json")
+model.load_model("model2/sepsis_model2.json")
 
 # =====================================================
 # STREAMLIT UI
